@@ -1,0 +1,319 @@
+<div data-section-id="{{ section.id }}" data-section-type="section-banner-v6" style="{% if section.settings.margin_top != blank %}margin-top: {{section.settings.margin_top}}px;{%endif%} {% if section.settings.margin_bottom != blank %}margin-bottom: {{section.settings.margin_bottom}}px;{% endif %}">
+  <div class="section-banner-v6 {% if section.settings.ena_margin_top %}  mt-all {% endif %}" >
+    <div class="container container-full">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 order1 col-12 p-0">
+          <div class="img-banner box-img">  
+            {% if section.settings.img_banner1 != blank %} 
+            <img loading="lazy" width="" height="" data-src="{{section.settings.img_banner1 | image_url }}" class="lazyload img-fluid w-100" alt >
+            {% else %}
+            <img loading="lazy" width="" height="" data-src="//via.placeholder.com/600x600" class="lazyload img-fluid w-100" alt>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 order2 col-12  banner p-0" style="background: {{section.settings.bg_section}}">
+            <div class="content-banner ">
+              {% if section.settings.title_banner1 != blank %}
+              <h3 class="title-banner" style="color: {{section.settings.color_title}}">{{section.settings.title_banner1}}</h3>
+              {% endif %}
+              {% if section.settings.content_banner1 != blank %}
+              <p class="content" style="color: {{section.settings.color_content_banner}}">{{section.settings.content_banner1}}</p>
+              {% endif %}
+              {% if section.settings.button_banner1 != blank %}
+              <a href="{{section.settings.url_button1}}" class="button-banner button-banner-{{ section.id }}">{{section.settings.button_banner1}}</a>
+              {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 order4 col-12 p-0">
+          <div class="img-banner box-img">  
+            {% if section.settings.img_banner2 != blank %}
+            <img loading="lazy" width="" height="" data-src="{{section.settings.img_banner2 | image_url }}" class="lazyload img-fluid w-100" alt >
+            {% else %}
+            <img loading="lazy" width="" height="" data-src="//via.placeholder.com/600x600" class="lazyload img-fluid w-100" alt>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 order3 col-12 banner p-0" style="background: {{section.settings.bg_section}}">
+            <div class="content-banner "> 
+              {% if section.settings.title_banner2 != blank %}
+              <h3 class="title-banner" style="color: {{section.settings.color_title}}">{{section.settings.title_banner2}}</h3>
+              {% endif %}
+              {% if section.settings.content_banner2 != blank %}
+              <p class="content" style="color: {{section.settings.color_content_banner}}">{{section.settings.content_banner2}}</p>
+              {% endif %}
+              {% if section.settings.button_banner2 != blank %}
+              <a href="{{section.settings.url_button2}}" class="button-banner button-banner-{{ section.id }}">{{section.settings.button_banner2}}</a>
+              {% endif %}
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 order2 col-12 banner p-0" style="background: {{section.settings.bg_section}}">
+            <div class="content-banner "> 
+              {% if section.settings.title_banner3 != blank %}
+              <h3 class="title-banner" style="color: {{section.settings.color_title}}">{{section.settings.title_banner3}}</h3>
+              {% endif %}
+              {% if section.settings.content_banner3 != blank %}
+              <p class="content" style="color: {{section.settings.color_content_banner}}">{{section.settings.content_banner3}}</p>
+              {% endif %}
+              {% if section.settings.button_banner3 != blank %}
+              <a href="{{section.settings.url_button3}}" class="button-banner button-banner-{{ section.id }}">{{section.settings.button_banner3}}</a>
+              {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 order1 col-12 p-0">
+          <div class="img-banner box-img"> 
+            {% if section.settings.img_banner3 != blank %}
+            <img loading="lazy" width="" height="" data-src="{{section.settings.img_banner3 | image_url }}" class="lazyload img-fluid w-100" alt >
+            {% else %}
+            <img loading="lazy" width="" height="" data-src="//via.placeholder.com/600x600" class="lazyload img-fluid w-100" alt>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 order3 banner p-0 " style="background: {{section.settings.bg_section}}">
+            <div class="content-banner ">
+              {% if section.settings.title_banner4 != blank %}
+              <h3 class="title-banner" style="color: {{section.settings.color_title}}">{{section.settings.title_banner4}}</h3>
+              {% endif %}
+              {% if section.settings.content_banner4 != blank %}
+              <p class="content" style="color: {{section.settings.color_content_banner}}">{{section.settings.content_banner4}}</p>
+              {% endif %}
+              {% if section.settings.button_banner4 != blank %}
+              <a href="{{section.settings.url_button4}}" class="button-banner button-banner-{{ section.id }}">{{section.settings.button_banner4}}</a>
+              {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 order4 p-0">
+          <div class="img-banner box-img"> 
+            {% if section.settings.img_banner4 != blank %}
+            <img loading="lazy" width="" height="" data-src="{{section.settings.img_banner4 | image_url }}" class="lazyload img-fluid w-100" alt >
+            {% else %}
+            <img loading="lazy" width="" height="" data-src="//via.placeholder.com/600x600" class="lazyload img-fluid w-100" alt>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.section-banner-v6 .banner .content-banner .button-banner-{{ section.id }} {
+    color: {{section.settings.color_btn}};
+    background: {{section.settings.bg_btn}};
+}
+.section-banner-v6 .banner .content-banner .button-banner-{{ section.id }}:hover {
+    color: {{section.settings.color_btn_hover}};
+    background: {{section.settings.bg_btn_hover}};
+}
+</style>
+{% schema %}
+{
+  "name": "BANNER V6",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_section",
+      "label": "Background  banner",
+      "default": "#ffd2d1"
+    },
+    {
+      "type": "text",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "info": "Defined in pixels. Do not add the 'px' unit."
+    },
+    {
+      "type": "text",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "info": "Defined in pixels. Do not add the 'px' unit."
+    },
+    {
+      "type": "checkbox",
+      "id": "ena_margin_top",
+      "label": "Enable Add Margin Top",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Space"
+    },
+    {
+      "type": "header",
+      "content": "Banenr 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_banner1",
+      "label": "Image Banner 1",
+      "info": "600x600px recommended"
+    },
+    {
+      "type": "text",
+      "id": "title_banner1",
+      "label": "Title Banner 1",
+      "default": "Jewelry store "
+    },
+    {
+      "type": "text",
+      "id": "content_banner1",
+      "label": "Content Banner 1",
+      "default": "Kgtes quis nisl sed rat eleentum rhncus sit amet in nisi. Phasellus tmpor sit aet ex finibus."
+    },
+    {
+      "type": "text",
+      "id": "button_banner1",
+      "label": "Button Banner 1",
+      "default": "explore now"
+    },
+    {
+      "type": "url",
+      "id": "url_button1",
+      "label": "URL Button Banner 1",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "Banenr 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_banner2",
+      "label": "Image Banner 2",
+      "info": "600x600px recommended"
+    },
+    {
+      "type": "text",
+      "id": "title_banner2",
+      "label": "Title Banner 2",
+      "default": "Jewelry store "
+    },
+    {
+      "type": "text",
+      "id": "content_banner2",
+      "label": "Content Banner 2",
+      "default": "Kgtes quis nisl sed rat eleentum rhncus sit amet in nisi. Phasellus tmpor sit aet ex finibus."
+    },
+    {
+      "type": "text",
+      "id": "button_banner2",
+      "label": "Button Banner 2",
+      "default": "explore now"
+    },
+    {
+      "type": "url",
+      "id": "url_button2",
+      "label": "URL Button Banner 2",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "Banenr 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_banner3",
+      "label": "Image Banner 3",
+      "info": "600x600px recommended"
+    },
+    {
+      "type": "text",
+      "id": "title_banner3",
+      "label": "Title Banner 3",
+      "default": "Jewelry store "
+    },
+    {
+      "type": "text",
+      "id": "content_banner3",
+      "label": "Content Banner 3",
+      "default": "Kgtes quis nisl sed rat eleentum rhncus sit amet in nisi. Phasellus tmpor sit aet ex finibus."
+    },
+    {
+      "type": "text",
+      "id": "button_banner3",
+      "label": "Button Banner 3",
+      "default": "explore now"
+    },
+    {
+      "type": "url",
+      "id": "url_button3",
+      "label": "URL Button Banner 3",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "Banenr 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_banner4",
+      "label": "Image Banner 4",
+      "info": "600x600px recommended"
+    },
+    {
+      "type": "text",
+      "id": "title_banner4",
+      "label": "Title Banner 4",
+      "default": "Jewelry store "
+    },
+    {
+      "type": "text",
+      "id": "content_banner4",
+      "label": "Content Banner 4",
+      "default": "Kgtes quis nisl sed rat eleentum rhncus sit amet in nisi. Phasellus tmpor sit aet ex finibus."
+    },
+    {
+      "type": "text",
+      "id": "button_banner4",
+      "label": "Button Banner 4",
+      "default": "explore now"
+    },
+    {
+      "type": "url",
+      "id": "url_button4",
+      "label": "URL Button Banner 4",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "Button Color"
+    },
+    {
+      "type": "color",
+      "id": "color_btn",
+      "label": "Color Button",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "bg_btn",
+      "label": "Background Color Button",
+      "default": "#f84747"
+    },
+    {
+      "type": "color",
+      "id": "color_btn_hover",
+      "label": "Color Button Hover",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "bg_btn_hover",
+      "label": "Background Color Button Hover",
+      "default": "#000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "BANNER V6",
+      "category": "HOME"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
