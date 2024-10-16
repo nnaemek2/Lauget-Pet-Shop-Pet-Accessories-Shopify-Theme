@@ -1,0 +1,249 @@
+<div data-section-id="{{ section.id }}" data-section-type="section-banner-v5" style="{% if section.settings.margin_top != blank %}margin-top: {{section.settings.margin_top}}px;{%endif%} {% if section.settings.margin_bottom != blank %}margin-bottom: {{section.settings.margin_bottom}}px;{% endif %}">
+  <div class="section-banner-v5 {% if section.settings.ena_padding_top %} padding_top_banner5 {% endif %}" style="background-image: url({% if section.settings.img_bg != blank %}{{ section.settings.img_bg | image_url }} {% else %} //via.placeholder.com/1920x700{% endif %}); background-size : cover ;">
+    <div class="{% if section.settings.ena_container %} container container-v2 {% endif %}"> 
+      <div class="row no-gutters align-items-center banner" > 
+        <div class=" col-md-4 ">
+          <div class="box-img1 img-left">
+            <div class="banner-content">
+              {% if section.settings.title_banner != blank %}
+              <h3 class="title-banner" style="color: {{section.settings.color_title}}">{{section.settings.title_banner}}</h3>
+              {% endif %}
+              {% if section.settings.sub_title_banner != blank %}
+              <p class="sub-title" style="color: {{section.settings.color_sub_title}}">{{section.settings.sub_title_banner}}</p>
+              {% endif %}
+
+              {% if section.settings.button_banner != blank %}
+              <a href="{{section.settings.url_banner}}" class="button-shop button-shop-{{ section.id }}" title="">{{section.settings.button_banner}}</a>
+              {% endif %}
+            </div>
+          </div>
+        </div> 
+        <div class=" col-md-4 "> 
+          <div class="img-banner img-right">
+            <a href="{{section.settings.url_banner}}">
+              {% if section.settings.img_banner_right != blank %}
+              <img loading="lazy" width="" height="" data-src="{{section.settings.img_banner_right | image_url }}" class="lazyload img-fluid w-100" alt >
+              {% else %}
+              <img loading="lazy" width="" height="" data-src="//via.placeholder.com/620x701" class="lazyload img-fluid w-100" alt>
+              {% endif %}
+            </a>
+          </div>
+        </div> 
+        <div class=" col-md-4 ">
+          <div class="box-img1 img-left">
+            <div class="banner-content">
+              {% if section.settings.title_banner2 != blank %}
+              <h3 class="title" style="color: {{section.settings.color_title}}">{{section.settings.title_banner2}}</h3>
+              {% endif %}
+              {% if section.settings.sub_title_banner2 != blank %}
+              <p class="sub" style="color: {{section.settings.color_sub_title}}">{{section.settings.sub_title_banner2}}</p>
+              {% endif %}
+              {% if section.settings.sub_title_banner3 != blank %}
+              <p class="sub" style="color: {{section.settings.color_sub_title}}">{{section.settings.sub_title_banner3}}</p>
+              {% endif %}
+              {% if section.settings.sub_title_banner4 != blank %}
+              <p class="sub" style="color: {{section.settings.color_sub_title}}">{{section.settings.sub_title_banner4}}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-banner-v5 .img-left .banner-content .button-shop-{{ section.id }} {
+    color: {{section.settings.color_btn}};
+    background: {{section.settings.bg_btn}};
+  }
+  .section-banner-v5 .img-left .banner-content .button-shop-{{ section.id }}:hover {
+    color: {{section.settings.color_btn_hover}};
+    background: {{section.settings.bg_btn_hover}};
+  }
+</style>
+{% schema %}
+{
+"name": "BANNER V5",
+"settings": [
+    {
+      "type": "checkbox",
+      "id": "ena_padding_top",
+      "label": "Enable Add Padding Top",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "ena_container",
+      "label": "Enable Add Container Box",
+      "default": true
+    },
+	{
+      "type": "image_picker",
+      "id": "img_bg",
+      "label": "Background Image",
+      "info": "1920 x 700px recommended"
+    },
+    {
+      "type": "select",
+      "id": "select_pos",
+      "label": "Select Position Content",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Section Space"
+    },
+    {
+      "type": "text",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "info": "Defined in pixels. Do not add the 'px' unit."
+    },
+    {
+      "type": "text",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "info": "Defined in pixels. Do not add the 'px' unit."
+    },
+    {
+      "type": "header",
+      "content": "Background Color Banner"
+    },
+    {
+      "type": "color",
+      "id": "bg_banner",
+      "label": "Backgorund Color",
+      "default": "#f2f2f2"
+    },
+    {
+      "type": "header",
+      "content": "Settings Banner Content"
+    },
+    {
+      "type": "text",
+      "id": "title_banner",
+      "label": "Title Banner",
+      "default": "Men's Wool Runner Mizzles"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "label": "Color Title banner",
+      "default": "#000"
+    },
+    {
+      "type": "text",
+      "id": "sub_title_banner",
+      "label": "Sub Title Banner",
+      "default": "Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur tellus eget odio aliquet, vel vestibulum tellus sollicitudin. Morbi maximus metus eu eros tincidunt, vitae mollis ante imperdiet."
+    },
+    {
+      "type": "color",
+      "id": "color_sub_title",
+      "label": "Color Sub Title banner",
+      "default": "#000"
+    },
+    {
+      "type": "text",
+      "id": "button_banner",
+      "label": "Button Banner 1",
+      "default": "Shop now"
+    },
+    {
+      "type": "header",
+      "content": "Settings Banner 2"
+    },
+    {
+      "type": "text",
+      "id": "title_banner2",
+      "label": "Title Banner 2",
+      "default": "PRODUCT DETAILS"
+    },
+    {
+      "type": "text",
+      "id": "sub_title_banner2",
+      "label": "Sub Title Banner 2",
+      "default": "<strong>Best For:</strong> Walking, traction, water-repellent protection"
+    },
+    {
+      "type": "text",
+      "id": "sub_title_banner3",
+      "label": "Sub Title Banner 3",
+      "default": "<strong>Best For:</strong> Walking, traction, water-repellent protection"
+    },
+    {
+      "type": "text",
+      "id": "sub_title_banner4",
+      "label": "Sub Title Banner 4",
+      "default": "<strong>Best For:</strong> Walking, traction, water-repellent protection"
+    },
+    {
+      "type": "header",
+      "content": " Color Button"
+    },
+    {
+      "type": "color",
+      "id": "color_btn",
+      "label": "Color button banner",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "bg_btn",
+      "label": "Background button ",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "bg_btn_hover",
+      "label": "Background button Hover",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "color_btn_hover",
+      "label": "Color button banner Hover",
+      "default": "#fff"
+    },
+    {
+      "type": "url",
+      "id": "url_banner",
+      "label": "URL Button ",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "Settings Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_banner_right",
+      "label": "Image Banner",
+      "info": "720 x 720px recommended"
+    }
+  ],
+  "presets": [
+    {
+      "name": "BANNER V5",
+      "category": "HOME"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
